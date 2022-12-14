@@ -1,13 +1,7 @@
-import {
-	AsyncIterableResolvingOperation,
-	extend,
-	extendAsync,
-	Mapper,
-	Reducer,
-} from '@codibre/fluent-iterable';
-import { BinarySearchTree } from './binary-search-tree';
-import { toOrderedMap } from './to-ordered-map';
-import { toOrderedMapAsync } from './to-ordered-map-async';
+import { extend, extendAsync, Mapper, Reducer } from '@codibre/fluent-iterable';
+import { BinarySearchTree } from './ordered-map/binary-search-tree';
+import { toOrderedMap } from './ordered-map/to-ordered-map';
+import { toOrderedMapAsync } from './ordered-map/to-ordered-map-async';
 
 declare module '@codibre/fluent-iterable' {
 	interface FluentIterable<T> {
@@ -110,7 +104,4 @@ declare module '@codibre/fluent-iterable' {
 
 extend.useResolving('toBinarySearchTree', toOrderedMap);
 extend.useResolving('toBinarySearchTreeAsync', toOrderedMapAsync);
-extendAsync.useResolving(
-	'toBinarySearchTree',
-	toOrderedMapAsync as unknown as AsyncIterableResolvingOperation,
-);
+extendAsync.useResolving('toBinarySearchTree', toOrderedMapAsync);

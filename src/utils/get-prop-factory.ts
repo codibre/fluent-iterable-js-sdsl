@@ -1,5 +1,5 @@
 import { identity } from '@codibre/fluent-iterable';
-import { Mapping } from './types';
+import { Mapping } from '../types';
 
 export function getPropFactory<T>(key: Mapping<T> | undefined) {
 	if (key === undefined) {

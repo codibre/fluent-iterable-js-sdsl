@@ -1,4 +1,4 @@
-import { BinarySearchTree } from '../../src';
+import { BinarySearchTree } from '../../../src';
 
 const proto = BinarySearchTree.prototype;
 

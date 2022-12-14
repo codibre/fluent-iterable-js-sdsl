@@ -1,9 +1,8 @@
 import { Comparer, fluent, Reducer } from '@codibre/fluent-iterable';
-import { fillOutMap } from './fill-out-map';
-import { getPropFactory } from './get-prop-factory';
-import { getComparer } from './get-comparer';
-import { Mapping } from './types';
+import { Mapping } from '../types';
+import { getComparer } from '../utils/get-comparer';
 import { BinarySearchTree } from './binary-search-tree';
+import { fillOutMap } from './fill-out-map';
 
 export function toOrderedMap<T>(
 	this: Iterable<T>,
@@ -17,9 +16,7 @@ export function toOrderedMap<T>(
 		value = undefined;
 	}
 	const result = new BinarySearchTree<unknown, unknown>(getComparer(cmp));
-	const getKey = getPropFactory(key);
-	const getValue = getPropFactory(value);
-	fluent(this).forEach(fillOutMap(getKey, getValue, reducer, result));
+	fluent(this).forEach(fillOutMap(key, value, reducer, result));
 
 	return result;
 }

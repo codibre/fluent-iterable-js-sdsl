@@ -1,12 +1,16 @@
 import { Reducer } from '@codibre/fluent-iterable';
 import { OrderedMap } from 'js-sdsl';
+import { Mapping } from '../types';
+import { getPropFactory } from '../utils/get-prop-factory';
 
 export function fillOutMap<T>(
-	getKey: (t: T) => unknown,
-	getValue: (t: T) => unknown,
+	key: Mapping<T>,
+	value: Mapping<T> | undefined,
 	reducer: Reducer<unknown, unknown> | undefined,
 	result: OrderedMap<unknown, unknown>,
 ) {
+	const getKey = getPropFactory(key);
+	const getValue = getPropFactory(value);
 	return (t: T) => {
 		const k = getKey(t);
 		let v = getValue(t);
