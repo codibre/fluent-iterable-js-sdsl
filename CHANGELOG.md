@@ -1,3 +1,10 @@
+# [0.4.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.3.1...v0.4.0) (2022-12-14)
+
+
+### Features
+
+* bettering methods names ([f07c2a1](https://github.com/codibre/fluent-iterable-js-sdsl/commit/f07c2a1eb3d62e88bd6ec5990252bc0e3e81cdfd))
+
 ## [0.3.1](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.3.0...v0.3.1) (2022-12-14)
 
 
