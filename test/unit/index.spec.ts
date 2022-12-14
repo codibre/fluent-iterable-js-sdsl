@@ -6,7 +6,10 @@ import { toOrderedMapAsync } from '../../src/to-ordered-map-async';
 describe('index.ts', () => {
 	describe(toOrderedMap.name, () => {
 		it('should return an ordered map instance', () => {
-			const result = fluent([3, 2, 1]).toOrderedMap(identity, (a, b) => a - b);
+			const result = fluent([3, 2, 1]).toBinarySearchTree(
+				identity,
+				(a, b) => a - b,
+			);
 
 			expect([...result]).toEqual([
 				[1, 1],
@@ -16,7 +19,7 @@ describe('index.ts', () => {
 		});
 
 		it('should return an ordered map instance when using key name mapping', () => {
-			const result = fluent([{ k: 3 }, { k: 2 }, { k: 1 }]).toOrderedMap(
+			const result = fluent([{ k: 3 }, { k: 2 }, { k: 1 }]).toBinarySearchTree(
 				'k',
 				(a, b) => a - b,
 			);
@@ -29,7 +32,7 @@ describe('index.ts', () => {
 		});
 
 		it('should return an ordered map instance when using key and value name mapping', () => {
-			const result = fluent([{ k: 3 }, { k: 2 }, { k: 1 }]).toOrderedMap(
+			const result = fluent([{ k: 3 }, { k: 2 }, { k: 1 }]).toBinarySearchTree(
 				'k',
 				'k',
 				(a, b) => a - b,
@@ -43,7 +46,7 @@ describe('index.ts', () => {
 		});
 
 		it('should return an ordered map instance when using key name mapping and value function', () => {
-			const result = fluent([{ k: 3 }, { k: 2 }, { k: 1 }]).toOrderedMap(
+			const result = fluent([{ k: 3 }, { k: 2 }, { k: 1 }]).toBinarySearchTree(
 				'k',
 				(x) => x.k * 2,
 				(a, b) => a - b,
@@ -59,7 +62,7 @@ describe('index.ts', () => {
 
 	describe(toOrderedMapAsync.name, () => {
 		it('should return an ordered map instance', async () => {
-			const result = await fluent([3, 2, 1]).toOrderedMapAsync(
+			const result = await fluent([3, 2, 1]).toBinarySearchTreeAsync(
 				identity,
 				(a, b) => a - b,
 			);
@@ -76,7 +79,7 @@ describe('index.ts', () => {
 				{ k: 3 },
 				{ k: 2 },
 				{ k: 1 },
-			]).toOrderedMapAsync('k', (a, b) => a - b);
+			]).toBinarySearchTreeAsync('k', (a, b) => a - b);
 
 			expect([...result]).toEqual([
 				[1, { k: 1 }],
@@ -90,7 +93,7 @@ describe('index.ts', () => {
 				{ k: 3 },
 				{ k: 2 },
 				{ k: 1 },
-			]).toOrderedMapAsync('k', 'k', (a, b) => a - b);
+			]).toBinarySearchTreeAsync('k', 'k', (a, b) => a - b);
 
 			expect([...result]).toEqual([
 				[1, 1],
@@ -104,7 +107,7 @@ describe('index.ts', () => {
 				{ k: 3 },
 				{ k: 2 },
 				{ k: 1 },
-			]).toOrderedMapAsync(
+			]).toBinarySearchTreeAsync(
 				'k',
 				(x) => x.k * 2,
 				(a, b) => a - b,
@@ -120,7 +123,7 @@ describe('index.ts', () => {
 
 	describe(`${toOrderedMapAsync.name} (fluentAsync)`, () => {
 		it('should return an ordered map instance', async () => {
-			const result = await fluentAsync([3, 2, 1]).toOrderedMap(
+			const result = await fluentAsync([3, 2, 1]).toBinarySearchTree(
 				identity,
 				(a, b) => a - b,
 			);
@@ -137,7 +140,7 @@ describe('index.ts', () => {
 				{ k: 3 },
 				{ k: 2 },
 				{ k: 1 },
-			]).toOrderedMap('k', (a, b) => a - b);
+			]).toBinarySearchTree('k', (a, b) => a - b);
 
 			expect([...result]).toEqual([
 				[1, { k: 1 }],
@@ -151,7 +154,7 @@ describe('index.ts', () => {
 				{ k: 3 },
 				{ k: 2 },
 				{ k: 1 },
-			]).toOrderedMap('k', 'k', (a, b) => a - b);
+			]).toBinarySearchTree('k', 'k', (a, b) => a - b);
 
 			expect([...result]).toEqual([
 				[1, 1],
@@ -165,7 +168,7 @@ describe('index.ts', () => {
 				{ k: 3 },
 				{ k: 2 },
 				{ k: 1 },
-			]).toOrderedMap(
+			]).toBinarySearchTree(
 				'k',
 				(x) => x.k * 2,
 				(a, b) => a - b,

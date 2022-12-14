@@ -11,63 +11,63 @@ import { toOrderedMapAsync } from './to-ordered-map-async';
 
 declare module '@codibre/fluent-iterable' {
 	interface FluentIterable<T> {
-		toOrderedMap<K>(
+		toBinarySearchTree<K>(
 			key: Mapper<T, K>,
 			cmp?: (x: K, y: K) => number,
 		): BinarySearchTree<K, T>;
-		toOrderedMap<K extends keyof T>(
+		toBinarySearchTree<K extends keyof T>(
 			key: K,
 			cmp?: (x: T[K], y: T[K]) => number,
 		): BinarySearchTree<T[K], T>;
-		toOrderedMap<K, V>(
+		toBinarySearchTree<K, V>(
 			key: Mapper<T, K>,
 			value: Mapper<T, V>,
 			cmp?: (x: K, y: K) => number,
 			reducer?: Reducer<T, V>,
 		): BinarySearchTree<K, V>;
-		toOrderedMap<K extends keyof T, V>(
+		toBinarySearchTree<K extends keyof T, V>(
 			key: K,
 			value: Mapper<T, V>,
 			cmp?: (x: T[K], y: T[K]) => number,
 			reducer?: Reducer<T, V>,
 		): BinarySearchTree<T[K], V>;
-		toOrderedMap<K, V extends keyof T>(
+		toBinarySearchTree<K, V extends keyof T>(
 			key: Mapper<T, K>,
 			value: V,
 			cmp?: (x: K, y: K) => number,
 		): BinarySearchTree<K, T[V]>;
-		toOrderedMap<K extends keyof T, V extends keyof T>(
+		toBinarySearchTree<K extends keyof T, V extends keyof T>(
 			key: K,
 			value: V,
 			cmp?: (x: T[K], y: T[K]) => number,
 		): BinarySearchTree<T[K], T[V]>;
 
-		toOrderedMapAsync<K>(
+		toBinarySearchTreeAsync<K>(
 			key: Mapper<T, K>,
 			cmp?: (x: K, y: K) => number,
 		): Promise<BinarySearchTree<K, T>>;
-		toOrderedMapAsync<K extends keyof T>(
+		toBinarySearchTreeAsync<K extends keyof T>(
 			key: K,
 			cmp?: (x: T[K], y: T[K]) => number,
 		): Promise<BinarySearchTree<T[K], T>>;
-		toOrderedMapAsync<K, V>(
+		toBinarySearchTreeAsync<K, V>(
 			key: Mapper<T, K>,
 			value: Mapper<T, V>,
 			cmp?: (x: K, y: K) => number,
 			reducer?: Reducer<T, V>,
 		): Promise<BinarySearchTree<K, V>>;
-		toOrderedMapAsync<K extends keyof T, V>(
+		toBinarySearchTreeAsync<K extends keyof T, V>(
 			key: K,
 			value: Mapper<T, V>,
 			cmp?: (x: T[K], y: T[K]) => number,
 			reducer?: Reducer<T, V>,
 		): Promise<BinarySearchTree<T[K], V>>;
-		toOrderedMapAsync<K, V extends keyof T>(
+		toBinarySearchTreeAsync<K, V extends keyof T>(
 			key: Mapper<T, K>,
 			value: V,
 			cmp?: (x: K, y: K) => number,
 		): Promise<BinarySearchTree<K, T[V]>>;
-		toOrderedMapAsync<K extends keyof T, V extends keyof T>(
+		toBinarySearchTreeAsync<K extends keyof T, V extends keyof T>(
 			key: K,
 			value: V,
 			cmp?: (x: T[K], y: T[K]) => number,
@@ -75,32 +75,32 @@ declare module '@codibre/fluent-iterable' {
 	}
 
 	interface FluentAsyncIterable<T> {
-		toOrderedMap<K>(
+		toBinarySearchTree<K>(
 			key: Mapper<T, K>,
 			cmp?: (x: K, y: K) => number,
 		): Promise<BinarySearchTree<K, T>>;
-		toOrderedMap<K extends keyof T>(
+		toBinarySearchTree<K extends keyof T>(
 			key: K,
 			cmp?: (x: T[K], y: T[K]) => number,
 		): Promise<BinarySearchTree<T[K], T>>;
-		toOrderedMap<K, V>(
+		toBinarySearchTree<K, V>(
 			key: Mapper<T, K>,
 			value: Mapper<T, V>,
 			cmp?: (x: K, y: K) => number,
 			reducer?: Reducer<T, V>,
 		): Promise<BinarySearchTree<K, V>>;
-		toOrderedMap<K extends keyof T, V>(
+		toBinarySearchTree<K extends keyof T, V>(
 			key: K,
 			value: Mapper<T, V>,
 			cmp?: (x: T[K], y: T[K]) => number,
 			reducer?: Reducer<T, V>,
 		): Promise<BinarySearchTree<T[K], V>>;
-		toOrderedMap<K, V extends keyof T>(
+		toBinarySearchTree<K, V extends keyof T>(
 			key: Mapper<T, K>,
 			value: V,
 			cmp?: (x: K, y: K) => number,
 		): Promise<BinarySearchTree<K, T[V]>>;
-		toOrderedMap<K extends keyof T, V extends keyof T>(
+		toBinarySearchTree<K extends keyof T, V extends keyof T>(
 			key: K,
 			value: V,
 			cmp?: (x: T[K], y: T[K]) => number,
@@ -108,9 +108,9 @@ declare module '@codibre/fluent-iterable' {
 	}
 }
 
-extend.useResolving('toOrderedMap', toOrderedMap);
-extend.useResolving('toOrderedMapAsync', toOrderedMapAsync);
+extend.useResolving('toBinarySearchTree', toOrderedMap);
+extend.useResolving('toBinarySearchTreeAsync', toOrderedMapAsync);
 extendAsync.useResolving(
-	'toOrderedMap',
+	'toBinarySearchTree',
 	toOrderedMapAsync as unknown as AsyncIterableResolvingOperation,
 );
