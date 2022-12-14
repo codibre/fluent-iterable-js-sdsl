@@ -1,3 +1,10 @@
+# [0.5.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.4.0...v0.5.0) (2022-12-14)
+
+
+### Features
+
+* adding toBinaryTreeSet operation ([99261f2](https://github.com/codibre/fluent-iterable-js-sdsl/commit/99261f28eaab06ec0cdda8bd0b27c62efcda18a1))
+
 # [0.4.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.3.1...v0.4.0) (2022-12-14)
 
 
