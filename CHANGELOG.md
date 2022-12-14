@@ -1,3 +1,10 @@
+# [0.2.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.1.0...v0.2.0) (2022-12-14)
+
+
+### Features
+
+* extending OrderedMap for easier use ([fd307d4](https://github.com/codibre/fluent-iterable-js-sdsl/commit/fd307d4f553ab965ef46c919fd7f649248bbafe9))
+
 # [0.1.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.0.0...v0.1.0) (2022-12-14)
 
 
