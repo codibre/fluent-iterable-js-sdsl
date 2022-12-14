@@ -1,3 +1,10 @@
+## [0.3.1](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.3.0...v0.3.1) (2022-12-14)
+
+
+### Bug Fixes
+
+* fixing contract ([e7a4ff0](https://github.com/codibre/fluent-iterable-js-sdsl/commit/e7a4ff00cc3e33393f1502e09d7899d0e91c9a51))
+
 # [0.3.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.2.0...v0.3.0) (2022-12-14)
 
 
