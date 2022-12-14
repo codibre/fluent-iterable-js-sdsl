@@ -1,3 +1,10 @@
+# [0.3.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.2.0...v0.3.0) (2022-12-14)
+
+
+### Features
+
+* exposing comparers and creating iterateSection ([2e88301](https://github.com/codibre/fluent-iterable-js-sdsl/commit/2e88301ac28b66ae9e2b12a94f2acda1e3f19098))
+
 # [0.2.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.1.0...v0.2.0) (2022-12-14)
 
 
