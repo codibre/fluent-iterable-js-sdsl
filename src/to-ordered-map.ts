@@ -16,7 +16,7 @@ export function toOrderedMap<T>(
 		cmp = arguments[arguments.length - 1];
 		value = undefined;
 	}
-	const result = new BinarySearchTree<unknown, unknown>([], getComparer(cmp));
+	const result = new BinarySearchTree<unknown, unknown>(getComparer(cmp));
 	const getKey = getPropFactory(key);
 	const getValue = getPropFactory(value);
 	fluent(this).forEach(fillOutMap(getKey, getValue, reducer, result));

@@ -19,7 +19,7 @@ export async function toOrderedMapAsync<T>(
 			value = undefined;
 		}
 	}
-	const result = new BinarySearchTree<unknown, unknown>([], getComparer(cmp));
+	const result = new BinarySearchTree<unknown, unknown>(getComparer(cmp));
 	const getKey = getPropFactory(key);
 	const getValue = getPropFactory(value);
 	await fluentAsync(this).forEach(
