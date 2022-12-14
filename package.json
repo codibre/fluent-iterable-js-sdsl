@@ -76,7 +76,7 @@
   },
   "devDependencies": {
     "@codibre/confs": "^1.1.2",
-    "@codibre/fluent-iterable": "^1.26.2",
+    "@codibre/fluent-iterable": "^1.26.3",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",

@@ -1,5 +1,5 @@
 import { Comparer, fluentAsync, Reducer } from '@codibre/fluent-iterable';
-import { OrderedMap } from 'js-sdsl';
+import { BinarySearchTree } from './binary-search-tree';
 import { fillOutMap } from './fill-out-map';
 import { getComparer } from './get-comparer';
 import { getPropFactory } from './get-prop-factory';
@@ -19,7 +19,7 @@ export async function toOrderedMapAsync<T>(
 			value = undefined;
 		}
 	}
-	const result = new OrderedMap<unknown, unknown>([], getComparer(cmp));
+	const result = new BinarySearchTree<unknown, unknown>([], getComparer(cmp));
 	const getKey = getPropFactory(key);
 	const getValue = getPropFactory(value);
 	await fluentAsync(this).forEach(

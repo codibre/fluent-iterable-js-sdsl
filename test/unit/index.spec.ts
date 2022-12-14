@@ -1,5 +1,5 @@
 import { fluent, fluentAsync, identity } from '@codibre/fluent-iterable';
-import '../../src';
+import '../../src/ordered-map-declaration';
 import { toOrderedMap } from '../../src/to-ordered-map';
 import { toOrderedMapAsync } from '../../src/to-ordered-map-async';
 
