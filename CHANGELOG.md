@@ -1,3 +1,10 @@
+# [0.7.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.6.0...v0.7.0) (2022-12-15)
+
+
+### Features
+
+* adding PriorityQueue ([940b8dc](https://github.com/codibre/fluent-iterable-js-sdsl/commit/940b8dc6d49b8d195a025808e05119318ab303a2))
+
 # [0.6.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.5.0...v0.6.0) (2022-12-15)
 
 
