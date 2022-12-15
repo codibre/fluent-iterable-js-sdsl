@@ -1,5 +1,5 @@
 import { extend, extendAsync, Mapper } from '@codibre/fluent-iterable';
-import { BinarySearchTree } from './ordered-map/binary-search-tree';
+import { BinarySearchTreeSet } from './ordered-set/binary-search-tree-set';
 import { toOrderedSet } from './ordered-set/to-ordered-set';
 import { toOrderedSetAsync } from './ordered-set/to-ordered-set-async';
 
@@ -8,31 +8,31 @@ declare module '@codibre/fluent-iterable' {
 		toBinarySearchTreeSet<K>(
 			key: Mapper<T, K>,
 			cmp?: (x: K, y: K) => number,
-		): BinarySearchTree<K, T>;
+		): BinarySearchTreeSet<K>;
 		toBinarySearchTreeSet<K extends keyof T>(
 			key: K,
 			cmp?: (x: T[K], y: T[K]) => number,
-		): BinarySearchTree<T[K], T>;
+		): BinarySearchTreeSet<T[K]>;
 
-		toBinarySearchTreeAsync<K>(
+		toBinarySearchTreeSetAsync<K>(
 			key: Mapper<T, K>,
 			cmp?: (x: K, y: K) => number,
-		): Promise<BinarySearchTree<K, T>>;
-		toBinarySearchTreeAsync<K extends keyof T>(
+		): Promise<BinarySearchTreeSet<K>>;
+		toBinarySearchTreeSetAsync<K extends keyof T>(
 			key: K,
 			cmp?: (x: T[K], y: T[K]) => number,
-		): Promise<BinarySearchTree<T[K], T>>;
+		): Promise<BinarySearchTreeSet<T[K]>>;
 	}
 
 	interface FluentAsyncIterable<T> {
 		toBinarySearchTreeSet<K>(
 			key: Mapper<T, K>,
 			cmp?: (x: K, y: K) => number,
-		): Promise<BinarySearchTree<K, T>>;
+		): Promise<BinarySearchTreeSet<K>>;
 		toBinarySearchTreeSet<K extends keyof T>(
 			key: K,
 			cmp?: (x: T[K], y: T[K]) => number,
-		): Promise<BinarySearchTree<T[K], T>>;
+		): Promise<BinarySearchTreeSet<T[K]>>;
 	}
 }
 

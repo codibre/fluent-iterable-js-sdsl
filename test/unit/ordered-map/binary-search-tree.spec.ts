@@ -1,3 +1,4 @@
+import { OrderedMap } from 'js-sdsl';
 import { BinarySearchTree } from '../../../src';
 
 const proto = BinarySearchTree.prototype;
@@ -6,6 +7,10 @@ describe(BinarySearchTree.name, () => {
 	let target: BinarySearchTree<number, unknown>;
 	beforeEach(() => {
 		target = new BinarySearchTree<number, unknown>();
+	});
+
+	it('should extend OrderedMap', () => {
+		expect(target).toBeInstanceOf(OrderedMap);
 	});
 
 	describe(proto.findLe.name, () => {

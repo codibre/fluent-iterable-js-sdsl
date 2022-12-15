@@ -1,5 +1,6 @@
 import 'jest-extended';
 import 'jest-callslike';
+import '../src';
 
 afterEach(() => {
 	jest.restoreAllMocks();

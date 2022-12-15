@@ -1,3 +1,4 @@
+import { OrderedSet } from 'js-sdsl';
 import { BinarySearchTreeSet } from '../../../src';
 
 const proto = BinarySearchTreeSet.prototype;
@@ -6,6 +7,10 @@ describe(BinarySearchTreeSet.name, () => {
 	let target: BinarySearchTreeSet<number>;
 	beforeEach(() => {
 		target = new BinarySearchTreeSet<number>();
+	});
+
+	it('should extend OrderedSet', () => {
+		expect(target).toBeInstanceOf(OrderedSet);
 	});
 
 	describe(proto.findLe.name, () => {

@@ -2,7 +2,7 @@ import { Comparer, fluent } from '@codibre/fluent-iterable';
 import { BinarySearchTreeSet } from './binary-search-tree-set';
 import { getComparer } from '../utils/get-comparer';
 import { Mapping } from '../types';
-import { fillOutSet } from './fill-out-set';
+import { fillOutFactory } from '../utils/fill-out-factory';
 
 export function toOrderedSet<T>(
 	this: Iterable<T>,
@@ -10,7 +10,7 @@ export function toOrderedSet<T>(
 	cmp: Comparer<unknown> | undefined,
 ) {
 	const result = new BinarySearchTreeSet<unknown>(getComparer(cmp));
-	fluent(this).forEach(fillOutSet(result, key));
+	fluent(this).forEach(fillOutFactory(result, 'insert', key));
 
 	return result;
 }
