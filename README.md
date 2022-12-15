@@ -11,7 +11,7 @@ This packages is an ex extension to [@codibr/fluent-iterable](https://www.npmjs.
 ## How to Install
 
 ```
-npm i @fluent-iterable/js-sdsl
+npm i @fluent-iterable/js-sdsl @fluent-iterable js-sdsl
 ```
 
 ## How to use it
