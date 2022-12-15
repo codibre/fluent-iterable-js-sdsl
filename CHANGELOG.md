@@ -1,3 +1,10 @@
+# [0.6.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.5.0...v0.6.0) (2022-12-15)
+
+
+### Features
+
+* adding queue, deque and stack integration ([ee10997](https://github.com/codibre/fluent-iterable-js-sdsl/commit/ee10997cde627c23fdad8eeb5e2dae1f9c736c24))
+
 # [0.5.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.4.0...v0.5.0) (2022-12-14)
 
 
