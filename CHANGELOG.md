@@ -1,3 +1,10 @@
+## [0.7.1](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.7.0...v0.7.1) (2022-12-15)
+
+
+### Bug Fixes
+
+* filling out readme ([3f38b75](https://github.com/codibre/fluent-iterable-js-sdsl/commit/3f38b75322f058214d3c8bdc3ee05aa9f412aa43))
+
 # [0.7.0](https://github.com/codibre/fluent-iterable-js-sdsl/compare/v0.6.0...v0.7.0) (2022-12-15)
 
 
