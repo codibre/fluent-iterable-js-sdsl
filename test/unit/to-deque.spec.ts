@@ -3,7 +3,7 @@ import { IterableDeque } from '../../src';
 import { toDeque } from '../../src/deque/to-deque';
 import { toDequeAsync } from '../../src/deque/to-deque-async';
 
-describe('index.ts', () => {
+describe('deque-declaration.ts', () => {
 	describe(toDeque.name, () => {
 		it('should return an ordered map instance using function mapper', () => {
 			const result = fluent([3, 2, 1]).toDeque(identity);

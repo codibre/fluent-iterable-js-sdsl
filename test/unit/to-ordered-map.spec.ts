@@ -2,7 +2,7 @@ import { fluent, fluentAsync, identity } from '@codibre/fluent-iterable';
 import { toOrderedMap } from '../../src/ordered-map/to-ordered-map';
 import { toOrderedMapAsync } from '../../src/ordered-map/to-ordered-map-async';
 
-describe('index.ts', () => {
+describe('ordered-map-declaration.ts', () => {
 	describe(toOrderedMap.name, () => {
 		it('should return an ordered map instance', () => {
 			const result = fluent([3, 2, 1]).toBinarySearchTree(

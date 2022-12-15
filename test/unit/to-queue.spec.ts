@@ -3,7 +3,7 @@ import { IterableQueue } from '../../src';
 import { toQueue } from '../../src/queue/to-queue';
 import { toQueueAsync } from '../../src/queue/to-queue-async';
 
-describe('index.ts', () => {
+describe('queue-declaration.ts', () => {
 	describe(toQueue.name, () => {
 		it('should return an ordered map instance using function mapper', () => {
 			const result = fluent([3, 2, 1]).toQueue(identity);

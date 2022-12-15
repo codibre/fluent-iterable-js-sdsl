@@ -4,6 +4,8 @@ export * from './ordered-map-declaration';
 export * from './ordered-map/binary-search-tree';
 export * from './ordered-set-declaration';
 export * from './ordered-set/binary-search-tree-set';
+export * from './priority-queue-declaration';
+export * from './priority-queue/iterable-priority-queue';
 export * from './queue-declaration';
 export * from './queue/iterable-queue';
 export * from './stack-declaration';

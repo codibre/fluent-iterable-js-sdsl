@@ -3,7 +3,7 @@ import { IterableStack } from '../../src';
 import { toStack } from '../../src/stack/to-stack';
 import { toStackAsync } from '../../src/stack/to-stack-async';
 
-describe('index.ts', () => {
+describe('stack-declaration.ts', () => {
 	describe(toStack.name, () => {
 		it('should return an ordered map instance using function mapper', () => {
 			const result = fluent([3, 2, 1]).toStack(identity);

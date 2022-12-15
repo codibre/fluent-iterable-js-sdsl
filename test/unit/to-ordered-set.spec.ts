@@ -2,7 +2,7 @@ import { fluent, fluentAsync, identity } from '@codibre/fluent-iterable';
 import { toOrderedSet } from '../../src/ordered-set/to-ordered-set';
 import { toOrderedSetAsync } from '../../src/ordered-set/to-ordered-set-async';
 
-describe('index.ts', () => {
+describe('ordered-set-declaration.ts', () => {
 	describe(toOrderedSet.name, () => {
 		it('should return an ordered map instance using custom comparer', () => {
 			const result = fluent([3, 2, 1]).toBinarySearchTreeSet(

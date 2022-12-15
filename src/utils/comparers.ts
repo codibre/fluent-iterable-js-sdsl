@@ -6,6 +6,10 @@ export function numberComparer(a: unknown, b: unknown) {
 	return (a as number) - (b as number);
 }
 
+export function descNumberComparer(a: unknown, b: unknown) {
+	return (b as number) - (a as number);
+}
+
 export function stringComparer(a: string, b: string) {
 	return a.localeCompare(b);
 }
