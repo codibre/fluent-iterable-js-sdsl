@@ -70,13 +70,12 @@
   },
   "keywords": [],
   "license": "MIT",
-  "peerDependencies": {
+  "dependencies": {
     "@codibre/fluent-iterable": "*",
     "js-sdsl": "*"
   },
   "devDependencies": {
     "@codibre/confs": "^1.1.2",
-    "@codibre/fluent-iterable": "^1.26.3",
     "@types/jest": "^27.4.1",
     "@typescript-eslint/eslint-plugin": "^5.28.0",
     "@typescript-eslint/parser": "^5.28.0",
@@ -89,7 +88,6 @@
     "jest": "^27.5.1",
     "jest-callslike": "^0.2.0",
     "jest-extended": "^2.0.0",
-    "js-sdsl": "^4.2.0",
     "prettier": "^2.5.1",
     "ts-jest": "^27.1.3",
     "ts-loader": "^9.2.7",
@@ -97,6 +95,5 @@
     "typedoc": "^0.22.17",
     "typedoc-plugin-markdown": "^3.12.1",
     "typescript": "^4.9.4"
-  },
-  "dependencies": {}
+  }
 }
